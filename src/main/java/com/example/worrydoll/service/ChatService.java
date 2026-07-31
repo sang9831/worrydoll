@@ -68,7 +68,7 @@ public class ChatService {
         return ragChatClient.prompt()
                 .advisors(a->a.param(
                         QuestionAnswerAdvisor.FILTER_EXPRESSION,
-                        "conversationId == '%s'".formatted(conversionService)
+                        "conversationId == '%s'".formatted(conversationId)
                 ))
                 .user(query)
                 .call()
